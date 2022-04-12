@@ -15,7 +15,7 @@
 """Multilingual text to phones converter"""
 
 
-__version__ = '3.1.1'
+__version__ = "3.1.2"
 """Phonemizer version"""
 
 
@@ -30,7 +30,7 @@ except NameError:
 
 if __PHONEMIZER_SETUP__:  # pragma: nocover
     import sys
-    sys.stderr.write(
-        'Partial import of phonemizer during the build process.\n')
+
+    sys.stderr.write("Partial import of phonemizer during the build process.\n")
 else:
     from .phonemize import phonemize  # pylint: disable=unused-import

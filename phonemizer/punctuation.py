@@ -103,7 +103,6 @@ class Punctuation:
 
     def _preserve_line(self, line: str, num: int) -> Tuple[List[str], List[_MarkIndex]]:
         """Auxiliary method for Punctuation.preserve()"""
-        print("WANAMAAAAAAA")
         line = re.sub(r"\d[,]\d", lambda x: x[0][0] + "§" + x[0][2], line)
         line = re.sub(r"\d[\.]\d", lambda x: x[0][0] + "#" + x[0][2], line)
         matches = list(re.finditer(self._marks_re, line))
